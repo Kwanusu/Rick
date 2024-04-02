@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rick and Morty</title>
+    <title>Location</title>
     <script src="https://kit.fontawesome.com/7adf3be8fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="rick.css">
 </head>
 <body>
     <nav id="navbar">
         <div>
-            <ul id="sidemenu">
+            <ul id="side-menu">
+              <li><a href="rick.html">Home</a></li>
               <li><a href="characters.html">Characters</a></li>
               <li><a href="location.html">Location</a></li>
               <li><a href="episodes.html">Episodes</a></li>
@@ -21,28 +22,14 @@
     </nav>
     <hr>
     <div class="container">
-
-        <img src="https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/TsSRXvDuraoJ7apdkH6tsHhf-ZQ/AAAABbtnw6C35mhluezr-K_FiP65TW93xpH0M3S6lKPv50_7eshzc1vosWxE3CxcnJ5-eVYmpcaQyra9yFLzQtsNx4odwYO-GtDDmDU0.png?r=47e" alt="logo" class="logo">
-
-        <div id="heading"></div>
         <div>
-            <input type="text" placeholder="search character" class="btn">
-            <button id="characterInput" class="btn"onclick=searchCharacter()>
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            <input type="text" placeholder="search episode" class="btn">
-            <button id="episodeInput" class="btn"onclick=searchEpisode()>
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
             <input type="text" placeholder="search location" class="btn">
-            <button id="locationInput" class="btn"onclick=searchLocation()>
+            <button id="location-input" class="btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
+            </button>
         </div>
-
-        <div id="characters" class="characters"></div>
-
-        <div id="single-character"></div>
+        <img src="https://occ-0-1068-1723.1.nflxso.net/dnm/api/v6/TsSRXvDuraoJ7apdkH6tsHhf-ZQ/AAAABbtnw6C35mhluezr-K_FiP65TW93xpH0M3S6lKPv50_7eshzc1vosWxE3CxcnJ5-eVYmpcaQyra9yFLzQtsNx4odwYO-GtDDmDU0.png?r=47e" alt="logo" class="logo">
+        <div id="locations" class="locations"></div>
 
         <div class="cta">
             <button class="prev" id="prev">
@@ -54,11 +41,7 @@
                 <i class="fas fa-arrow-right"></i>
             </button>
         </div>
-
-    </div> 
+    </div>
+    <script src="location.js"></script>
 </body>
-<footer>
-
-</footer>
-<script src="rick.js"></script>
 </html>

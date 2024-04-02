@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background-color: #202329;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    background-image: url(rick-background.jpg);
+    background-attachment: fixed;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+   #navbar a.active {
+    background-color: black;
+    color: white;
+    box-shadow: #333;
+  } 
+
+  img{
+    width: 100%;
+    height: 70%;
+    margin-top: 0;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap: wrap; 
+  }
+  nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    font-family: Arial;
+  }
+  nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    margin-right: 80px;
+    background-color: #202329;
+  }
+  
+  nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+  }
+  nav ul li a:hover::after{
+    width: 100%;
+  }
+
+.container .logo{
+    width: 400px;
+    height: 150px;
+}
+
+.episode-info{
+    display: flex;
+    color: #ff004f;
+}
+
+.btn{
+    background-color: rgb(78, 250, 10);
+    display:inline-block;
+    color: white;
+    font-size: large;
+    font-family: Arial;
+    font-weight: 200;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 5px;
+  }
+
+  .fas {
+    color: #fff;
+    align-items: center;
+  }
+
+.episode-info:hover{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    animation: openModal 0.3s ease;
+}
+
+.modal-container{
+    overflow: hidden;
+    width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.modal-container img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.modal-container h3{
+    line-height: 1;
+}
+
+.modal-container {
+    padding: 1rem;
+}
+
+.cta{
+    margin: 30px 0;
+    width: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta button{
+    border: none;
+    background-color: #47e31e;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 0.7rem 1.2rem;
+    border-radius: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+.cta button:hover{
+    background-color: #30a812;
+    color: black;
+}
+
+@media(max-width: 1100px){
+    .characters{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .character{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media(max-width: 960px){
+    .characters{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .character{
+        height: 225px;
+        width: 225px;
+    }
+}
+
+@media(max-width: 800px){
+    .characters{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .character{
+        height: 250px;
+        width: 250px;
+    }
+}
+
+nav .fas{
+    display: none;
+}
+
+@media(max-width: 600px){
+    
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #1323fc;
+        color: black;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .container .logo{
+        width: 300px;
+        height: 100px;
+    }
+
+    .characters{
+        grid-template-columns: 1fr;
+    }
+
+    .character{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@keyframes openModal{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
